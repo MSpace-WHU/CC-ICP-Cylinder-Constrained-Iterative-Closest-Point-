@@ -18,9 +18,9 @@ Traditional fine registration methods (ICP, GICP, NDT, etc.) are originally desi
 
 Targeting the inherent geometric characteristics of forest scenes, CC-ICP constructs dual constraint mechanisms to optimize the traditional ICP objective function, effectively solving the poor adaptation problem of classic algorithms in forest point cloud registration:
 
-1. **Ground plane constraint (vertical stabilization)**: Extract high-precision ground points via grid minimum filtering, construct point-to-plane residual terms, and provide stable vertical direction constraint for registration;
+1. **Ground plane constraint (vertical stabilization)**: Extract high-precision ground points, construct point-to-plane residual terms, and provide stable vertical direction constraint for registration;
 
-2. **Tree cylinder constraint (horizontal stabilization)**: Perform adaptive height slicing on point clouds based on ground interpolation, extract tree trunk primitives through DBSCAN clustering combined with normal-assisted RANSAC cylinder fitting, and build point-to-point residual terms relying on trunk cylinder center features to constrain horizontal offset errors.
+2. **Tree cylinder constraint (horizontal stabilization)**: Perform adaptive height slicing on point clouds based on ground interpolation, extract tree trunk primitives through DBSCAN clustering combined with RANSAC cylinder fitting, and build point-to-point residual terms relying on trunk cylinder center features to constrain horizontal offset errors.
 
 The algorithm adaptively fuses two types of residual information through a weighted least squares framework, iteratively solves the rigid transformation matrix via the Gauss-Newton method, and dynamically updates ground features and trunk cylinder primitives in each iteration to realize robust and high-precision fine alignment of forest point clouds.
 

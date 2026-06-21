@@ -26,9 +26,9 @@ The algorithm adaptively fuses two types of residual information through a weigh
 
 ### Key Pipeline
 
-1. Ground point extraction from raw forest point clouds using grid minimum filter;
+1. Ground point extraction from raw forest point clouds;
 
-2. Adaptive point cloud slicing based on IDW ground height interpolation;
+2. Point cloud slicing;
 
 3. Tree trunk detection: DBSCAN spatial clustering + RANSAC cylinder fitting;
 
@@ -59,8 +59,6 @@ This implementation depends on classic point cloud processing and linear algebra
 - PCL >= 1.8 (Tested on PCL 1.11.1)
 
 - Eigen >= 3.3
-
-- CMake >= 3.12
 
 - C++14 and above compiler (GCC / Clang / MSVC)
 

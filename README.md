@@ -1,4 +1,4 @@
-# CC-ICP: Cylinder-Constrained Iterative Closest Point for Forest Point Cloud Fine Registration
+# CC-ICP: Cylinder-Constrained Iterative Closest Point for Robust Forest Point Cloud Registration
 
 This repository contains the official C++ implementation of **CC-ICP (Cylinder-Constrained Iterative Closest Point)**, a dedicated fine registration algorithm for forest point clouds, as described in the paper. 
 
